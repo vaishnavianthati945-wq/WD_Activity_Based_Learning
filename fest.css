@@ -1,0 +1,418 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f7ff;
+    color: #292642;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #211c45;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header h1 {
+    font-size: 27px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Hero Banner */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25, 19, 65, 0.92),
+            rgba(70, 39, 110, 0.42)
+        ),
+        url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #ffd166;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content > p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.fest-date {
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 8px 8px 0 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffbd59;
+    color: #211c45;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #ffda91;
+}
+
+.secondary {
+    background-color: white;
+}
+
+/* Common Sections */
+section {
+    padding: 55px 7%;
+    scroll-margin-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #48358b;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    text-align: center;
+    color: #6e6986;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    background-color: white;
+}
+
+.about > p {
+    max-width: 850px;
+    margin: 15px auto 30px;
+}
+
+.highlights {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    background-color: #eeeaff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    min-width: 170px;
+}
+
+.highlight h3 {
+    color: #6c4bd2;
+    font-size: 27px;
+}
+
+/* Event Cards */
+.events {
+    background-color: #f0edff;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(36, 27, 80, 0.12);
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 12px 0;
+    color: #342565;
+    font-size: 22px;
+}
+
+.card-content p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.category {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.technical {
+    background-color: #dceaff;
+    color: #174b91;
+}
+
+.cultural {
+    background-color: #ffe1ed;
+    color: #9d245a;
+}
+
+.workshop {
+    background-color: #d9f8e8;
+    color: #176c46;
+}
+
+/* Schedule */
+.schedule {
+    background-color: white;
+}
+
+.day-heading {
+    margin: 25px 0 12px;
+    color: #48358b;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 450px;
+    background-color: white;
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid #ddd7f0;
+    text-align: left;
+}
+
+th {
+    background-color: #48358b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f0ff;
+}
+
+/* Rules */
+.rules {
+    background-color: #f0edff;
+}
+
+.rules-box {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 28px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(36, 27, 80, 0.08);
+}
+
+.rules ul {
+    padding-left: 22px;
+}
+
+.rules li {
+    margin: 12px 0;
+}
+
+/* Registration Form */
+.registration {
+    background-color: white;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    background-color: #f8f6ff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(36, 27, 80, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfc8e8;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #8d76dc;
+    border-color: #8d76dc;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    background-color: #eeeaff;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #211c45;
+    color: white;
+    padding: 22px;
+}
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 45px 7%;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .tagline {
+        letter-spacing: 1px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .highlights {
+        gap: 12px;
+    }
+
+    .highlight {
+        width: 100%;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .rules-box {
+        padding: 22px;
+    }
+}

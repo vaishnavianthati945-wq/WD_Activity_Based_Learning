@@ -1,0 +1,276 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f2;
+    color: #4b2929;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #6b3037;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd8a8;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 420px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            rgba(45, 20, 20, 0.65),
+            rgba(45, 20, 20, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #e9a66a;
+    color: #3e2020;
+    padding: 11px 22px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffd2a3;
+}
+
+/* Common Section Styles */
+section {
+    padding: 55px 7%;
+    scroll-margin-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #783b42;
+    margin-bottom: 12px;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #765b54;
+}
+
+/* Seasonal Offers */
+.offers {
+    background-color: #f7dfd3;
+    text-align: center;
+}
+
+.offers h2 {
+    color: #783b42;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.offers p {
+    margin: 8px 0;
+}
+
+/* Product Gallery */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 14px rgba(75, 41, 41, 0.12);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    color: #783b42;
+    margin: 15px 10px 5px;
+}
+
+.card p {
+    margin: 8px 15px;
+}
+
+.price {
+    color: #a14c3f;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.card .btn {
+    margin-top: 8px;
+}
+
+/* Custom Cake Section */
+.custom {
+    background-color: #f5e5d9;
+    text-align: center;
+}
+
+.custom img {
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+}
+
+.custom p {
+    margin: 10px 0;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff0e6;
+    text-align: center;
+}
+
+.contact p {
+    margin: 12px 0;
+}
+
+.contact .btn {
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #6b3037;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 520px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 45px 7%;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .custom img {
+        height: 250px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}
